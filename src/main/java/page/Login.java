@@ -14,7 +14,7 @@ Conexion conexion = new Conexion();
         conexion.conectar();
     }
 
-    @FindBy(xpath = "//*[@id=\"login-account-link\"]")
+    @FindBy(xpath = "//*[@id=\'login-account-link\']")
     private WebElement btnInicioSesion;
 
     @FindBy(name = "accbar_email")
@@ -29,7 +29,7 @@ Conexion conexion = new Conexion();
     public void modalLogin(String username, String password) throws InterruptedException {
 
         Thread.sleep(20000);
-        btnInicioSesion.click();
+        btnInicioSesion.submit();
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         ingresoCorreo.sendKeys(username);
