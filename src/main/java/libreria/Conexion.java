@@ -1,9 +1,7 @@
 package libreria;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.nio.file.Paths;
@@ -57,11 +55,11 @@ public class Conexion {
         WebDriverWait wait = new WebDriverWait(driver,10);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
-        driver.get("https://www.falabella.com/falabella-cl/");
+        driver.get("https://www.yapo.cl/");
 
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/div[1]")));
+        //wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/div[1]")));
 
 
     }

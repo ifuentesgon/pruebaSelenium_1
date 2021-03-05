@@ -1,16 +1,18 @@
 package testCases;
 
 
-import libreria.Conexion;
 import org.testng.annotations.Test;
+import page.Login;
 
 public class test1_BuscarNotebook_Metropolitana {
 
-    Conexion conexion = new Conexion();
+    String correo = "nafugo@gmail.com";
+    String pass = "nacho1716";
 
     @Test
-    public void test1() {
-        //conectar
-        conexion.conectar();
+    public void test1() throws InterruptedException {
+        Login login = new Login();
+        login.modalLogin(correo,pass);
+
     }
 }
