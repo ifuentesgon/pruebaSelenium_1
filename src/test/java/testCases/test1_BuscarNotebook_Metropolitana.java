@@ -10,7 +10,7 @@ public class test1_BuscarNotebook_Metropolitana {
 
     @Test
     public void test1() {
-
+        //Conexión Falabella
         conexion.conectar();
 
 
