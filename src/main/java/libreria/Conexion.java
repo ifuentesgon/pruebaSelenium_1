@@ -2,6 +2,7 @@ package libreria;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.nio.file.Paths;
@@ -33,7 +34,7 @@ public class Conexion {
         this.path = path;
     }
 
-    public static void conectar() {
+    public void conectar() {
 
         //* Identifica el Sistema Operativo *//
         String os = System.getProperty("os.name").toLowerCase(Locale.ROOT);
@@ -57,10 +58,10 @@ public class Conexion {
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         driver.get("https://www.yapo.cl/");
 
-        //driver.manage().window().maximize();
-
-        //wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/div[1]")));
 
 
     }
+
+
+
 }
