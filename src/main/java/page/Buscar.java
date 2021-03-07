@@ -1,7 +1,7 @@
 package page;
 
 import com.sun.org.apache.xerces.internal.util.Status;
-import com.sun.tools.javac.util.Assert;
+import org.testng.Assert;
 import libreria.Conexion;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
 
 
-import static com.sun.tools.javac.util.Assert.*;
+
 
 public class Buscar {
     //Atributos
@@ -56,87 +56,87 @@ public class Buscar {
     public void validaMenuLateral(){
         if (regionMetropolitana.isDisplayed()) {
             System.out.print("No Se visualiza correctamente Seleccion de Region");
-            //Assert.assertTrue(false);
+            Assert.assertTrue(false);
             //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         } else {
             System.out.print("Se visualiza correctamente Seleccion de Region");
-           // Assert.assertTrue(false);.
+           Assert.assertTrue(false);
            // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
 
         }
         if (tituloBuscarPalabra.isDisplayed()){
             System.out.print("Se visualiza correctamente el Titulo Buscar por palabra clave");
-            // Assert.assertTrue(false);.
+            Assert.assertTrue(false);
             // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
 
         }else{
             System.out.print("No Se visualiza correctamente el Titulo Buscar por palabra clave");
-            //Assert.assertTrue(false);
+            Assert.assertTrue(false);
             //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         }
         if (txtIngresoPalabra.isDisplayed()){
             System.out.print("Se visualiza correctamente la caja de texto de ingreso de palabra clave");
-            // Assert.assertTrue(false);.
+            Assert.assertTrue(false);
             // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
 
         }else{
             System.out.print("No Se visualiza correctamente la caja de texto de ingreso de palabra clave");
-            //Assert.assertTrue(false);
+            Assert.assertTrue(false);
             //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         }
         if (tituloFiltroRegion.isDisplayed()){
             System.out.print("Se visualiza correctamente Titulo Filtro Por Region");
-            // Assert.assertTrue(false);.
+            Assert.assertTrue(false);
             // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
 
         }else{
             System.out.print("No Se visualiza correctamente Titulo Filtro Por Region");
-            //Assert.assertTrue(false);
+            Assert.assertTrue(false);
             //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         }
         if (cboSeleccionaRegion.isDisplayed()){
             System.out.print("Se visualiza correctamente combobox, seleccione una Region");
-            // Assert.assertTrue(false);.
+            Assert.assertTrue(false);
             // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
         }else{
             System.out.print("No Se visualiza correctamente combobox, seleccione una Region");
-            //Assert.assertTrue(false);
+            Assert.assertTrue(false);
             //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         }
         if (cboSeleccionComuna.isDisplayed()){
             System.out.print("Se visualiza correctamente combobox, seleccione una Comuna");
-            // Assert.assertTrue(false);.
+            Assert.assertTrue(false);
             // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
         }else{
             System.out.print("No Se visualiza correctamente combobox, seleccione una Comuna");
-            //Assert.assertTrue(false);
+            Assert.assertTrue(false);
             //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         }
         if (tituloFiltrarCategoria.isDisplayed()){
             System.out.print("Se visualiza correctamente Titulo Filtran Por Categoria");
-            // Assert.assertTrue(false);.
+            Assert.assertTrue(false);
             // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
         }else{
             System.out.print("No Se visualiza correctamente Titulo Filtran Por Categoria");
-            //Assert.assertTrue(false);
+            Assert.assertTrue(false);
             //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         }
         if (cboSeleccionCategoria.isDisplayed()){
             System.out.print("Se visualiza correctamente Combobox selecciona una Categoria");
-            // Assert.assertTrue(false);.
+            Assert.assertTrue(false);
             // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
         }else{
             System.out.print("No Se visualiza correctamente Combobox selecciona una Categoria");
-            //Assert.assertTrue(false);
+            Assert.assertTrue(false);
             //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         }
         if (botonBuscar.isDisplayed()){
             System.out.print("Se visualiza correctamente Boton Buscar");
-            // Assert.assertTrue(false);.
+            Assert.assertTrue(false);
             // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
         }else{
             System.out.print("No Se visualiza correctamente Boton Buscar");
-            //Assert.assertTrue(false);
+            Assert.assertTrue(false);
             //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         }
     }

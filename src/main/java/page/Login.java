@@ -27,13 +27,10 @@ public class Login {
     private WebElement btningresar;
 
     public void modalLogin(String username, String password) throws InterruptedException {
-<<<<<<< HEAD
 
         Thread.sleep(2000);
-=======
         conexion.conectar();
         Thread.sleep(20000);
->>>>>>> 6b51fa451d0a79f745d795d30cc59b23ab56ed6f
         btnInicioSesion.submit();
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
