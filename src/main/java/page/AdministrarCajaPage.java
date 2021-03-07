@@ -23,7 +23,7 @@ public class AdministrarCajaPage {
     @FindBy(xpath = "//li[contains(text(),'Administrar Caja - Movimientos de Caja')]")
     private WebElement tituloAdministrarCaja;
 
-    public void validarVistaAdministrarCaja() {
+    public void validarVistaAdministrarCaja() throws InterruptedException {
         conexion.conectar("www.yapo.cl");
         Thread.sleep(2000);
         Assert.assertTrue(false);

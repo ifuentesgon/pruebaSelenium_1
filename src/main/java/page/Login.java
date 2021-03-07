@@ -16,7 +16,8 @@ import java.util.Locale;
 
 public class Login {
     Conexion conexion = new Conexion();
-    WebDriver driver;
+    //WebDriver driver= new ChromeDriver();
+    WebDriver driver= null;
     WebDriverWait wait;
 
     public Login(){
@@ -64,5 +65,12 @@ public class Login {
         webElementPassword.sendKeys((CharSequence) password);
         //Doy click en Ingresar al sistema
         wait.until(ExpectedConditions.elementToBeClickable(botonIngresar)).click();
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 }
