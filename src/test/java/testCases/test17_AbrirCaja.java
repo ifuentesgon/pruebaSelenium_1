@@ -6,18 +6,23 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import page.AdministrarCajaPage;
 import page.Login;
+import page.LoginPage;
 
 public class test17_AbrirCaja {
 
     AdministrarCajaPage administrarCajaPage = new AdministrarCajaPage();
-    Login login = new Login();
+    LoginPage loginPage = new LoginPage();
     String monto = "10000";
+    String nombre = "admin";
+    String pass = "admin";
 
-    @Test
-    public void flujoFront() throws InterruptedException {
+    public void flujoFront() {
 
 
-        //login.loginEasySystem();
+        loginPage.validaModalLogin();
+        loginPage.ingresaUser(nombre);
+        loginPage.ingresaPass(pass);
+        loginPage.clickIngresar();
         administrarCajaPage.clickBtnLateralCaja();
         administrarCajaPage.clickBtnLateralAdministrarCaja();
         administrarCajaPage.validarVistaAdministrarCaja();
