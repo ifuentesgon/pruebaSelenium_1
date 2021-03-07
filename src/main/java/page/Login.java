@@ -28,7 +28,7 @@ Conexion conexion = new Conexion();
 
     public void modalLogin(String username, String password) throws InterruptedException {
 
-        Thread.sleep(20000);
+        Thread.sleep(2000);
         btnInicioSesion.submit();
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
