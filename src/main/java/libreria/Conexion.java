@@ -35,11 +35,9 @@ public class Conexion {
     }
 
     public void conectar(String url) {
-
         //* Identifica el Sistema Operativo *//
         String os = System.getProperty("os.name").toLowerCase(Locale.ROOT);
         //System.out.print(os);
-
         if (os.contains("mac")){
             String path = Paths.get(System.getProperty("user.dir"),"/src/main/resources/drivers/chromedriver").toString();
             System.setProperty("webdriver.chrome.driver", path);
@@ -47,7 +45,6 @@ public class Conexion {
             String path = Paths.get(System.getProperty("user.dir"), "\\src\\main\\resources\\drivers\\chromedriver.exe").toString();
             System.setProperty("webdriver.chrome.driver", path);
         }
-
         WebDriver driver = new ChromeDriver();
 
         WebDriverWait wait = new WebDriverWait(driver,10);
@@ -55,8 +52,6 @@ public class Conexion {
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         //driver.get("https://www.yapo.cl/");
         driver.get(url);
-
-
     }
 
 

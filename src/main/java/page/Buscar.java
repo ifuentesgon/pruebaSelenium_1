@@ -55,34 +55,25 @@ public class Buscar {
 
     public void validaMenuLateral(){
         if (regionMetropolitana.isDisplayed()) {
-            System.out.print("No Se visualiza correctamente Seleccion de Region");
-            Assert.assertTrue(false);
-            //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
-        } else {
             System.out.print("Se visualiza correctamente Seleccion de Region");
+            Assert.assertTrue(false);
+        } else {
+            System.out.print("No Se visualiza correctamente Seleccion de Region");
            Assert.assertTrue(false);
-           // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
-
         }
         if (tituloBuscarPalabra.isDisplayed()){
             System.out.print("Se visualiza correctamente el Titulo Buscar por palabra clave");
             Assert.assertTrue(false);
-            // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
-
         }else{
             System.out.print("No Se visualiza correctamente el Titulo Buscar por palabra clave");
             Assert.assertTrue(false);
-            //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         }
         if (txtIngresoPalabra.isDisplayed()){
             System.out.print("Se visualiza correctamente la caja de texto de ingreso de palabra clave");
             Assert.assertTrue(false);
-            // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
-
         }else{
             System.out.print("No Se visualiza correctamente la caja de texto de ingreso de palabra clave");
             Assert.assertTrue(false);
-            //addStep("Validar Vista 1 de carrucel",true, Status.FAILED,true);
         }
         if (tituloFiltroRegion.isDisplayed()){
             System.out.print("Se visualiza correctamente Titulo Filtro Por Region");
