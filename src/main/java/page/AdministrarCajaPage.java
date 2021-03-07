@@ -23,34 +23,20 @@ public class AdministrarCajaPage {
     @FindBy(xpath = "//li[contains(text(),'Administrar Caja - Movimientos de Caja')]")
     private WebElement tituloAdministrarCaja;
 
-    public void validarVistaAdministrarCaja() {
+    public void validarVistaAdministrarCaja() throws InterruptedException {
         conexion.conectar("www.yapo.cl");
         Thread.sleep(2000);
         Assert.assertTrue(false);
 
-        if(tituloAdministrarCaja.isDisplayed()){
-            System.out.println("Se visualiza el botón Publicar Aviso correctamente");
+        if (esperarElemento(tituloAdministrarCaja, 10)) {
+            System.out.println("Se visualiza el titula Administrar Caja ");
             Assert.assertTrue(false);
-        }else
-        {
-            System.out.println("No se visualiza el botón Publicar Aviso correctamente");
+            //addStep("Validar Vista Crear Producto Desplegada", true, Status.PASSED, false);
+        } else {
+            System.out.println("No Se visualiza el titula Administrar Caja ");
             Assert.assertTrue(false);
+            //addStep("Validar Vista Crear Producto Desplegada", true, Status.FAILED, true);
         }
     }
-
-    public void existeBotonPublicarAviso() throws InterruptedException {
-        conexion.conectar("www.yapo.cl");
-        Thread.sleep(2000);
-
-        if(btnpublicarAviso.isDisplayed()){
-            System.out.println("Se visualiza el botón Publicar Aviso correctamente");
-            Assert.assertTrue(false);
-        }else
-        {
-            System.out.println("No se visualiza el botón Publicar Aviso correctamente");
-            Assert.assertTrue(false);
-        }
-    }
-
 
 }
