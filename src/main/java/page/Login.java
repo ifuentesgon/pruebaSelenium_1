@@ -6,19 +6,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import sun.jvm.hotspot.debugger.Page;
 
 
 import java.util.concurrent.TimeUnit;
-import java.nio.file.Paths;
-import java.util.Locale;
+
 
 public class Login {
     Conexion conexion = new Conexion();
-    //WebDriver driver= new ChromeDriver();
-    WebDriver driver= null;
+    WebDriver driver; //= new ChromeDriver();
     WebDriverWait wait;
+
 
     public Login(){
     }
@@ -52,11 +53,15 @@ public class Login {
     By txtUsuario = By.id("username");
     By txtPassword = By.id("password");
     By botonIngresar = By.xpath("//body/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[4]/button[1]");
-    /*----------------------------------------------------*/
+
+
+     /*----------------------------------------------------*/
+
     public void loginEasySystem()throws InterruptedException{
         String usuario= "admin";
         String password= "admin";
         conexion.conectar("http://inventario.tresniveles.com/?View=Login");
+
         //Ingreso usuario en caja de texto correspondiente
         WebElement webElementUsuario = driver.findElement(txtUsuario);
         webElementUsuario.sendKeys((CharSequence) usuario);
