@@ -1,18 +1,18 @@
 package page;
 
-import libreria.Conexion;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import page.Login;
 
 import static utils.Utils.esperarElemento;
 
 
 public class AdministrarCajaPage {
 
-    Conexion conexion = new Conexion();
+    public AdministrarCajaPage() {
 
-    public AdministrarCajaPage() {}
+    }
 
     @FindBy(xpath = "//span[contains(text(),'Caja')]")
     private WebElement btnMenuLateralCaja;
@@ -34,6 +34,8 @@ public class AdministrarCajaPage {
 
     @FindBy(id = "btnGuardar")
     private WebElement btnGuardar;
+
+
 
     public void validarVistaAdministrarCaja() {
         if (esperarElemento(tituloAdministrarCaja, 10)) {
