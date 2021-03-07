@@ -3,6 +3,7 @@ package testCases;
 import libreria.Conexion;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 import page.AdministrarCajaPage;
 import page.Login;
 
@@ -17,10 +18,11 @@ public class test17_AbrirCaja {
     String monto = "10000";
     String url = "http://inventario.tresniveles.com/?View=Login";
 
-
+    @Test
     public void flujoFront(){
 
-        //login.loginEasySystem();
+        Login login=new Login();
+        login.loginEasySystem();
         caja.clickBtnLateralCaja();
         caja.clickBtnLateralAdministrarCaja();
         caja.validarVistaAdministrarCaja();

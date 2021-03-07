@@ -35,12 +35,6 @@ public class AdministrarCajaPage {
     @FindBy(id = "btnGuardar")
     private WebElement btnGuardar;
 
-
-
-
-
-
-
     public void validarVistaAdministrarCaja() {
         if (esperarElemento(tituloAdministrarCaja, 10)) {
             System.out.println("Se visualiza el titula Administrar Caja ");
