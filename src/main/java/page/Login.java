@@ -27,7 +27,9 @@ public class Login {
     private WebElement btningresar;
 
     public void modalLogin(String username, String password) throws InterruptedException {
-        conexion.conectar();
+
+        Thread.sleep(2000);
+        conexion.conectar("www.yapo.cl");
         Thread.sleep(20000);
         btnInicioSesion.submit();
         WebDriver driver = new ChromeDriver();
