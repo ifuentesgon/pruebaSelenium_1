@@ -23,7 +23,7 @@ public class BotonPublicar {
         }else
         {
             System.out.println("No se visualiza el botón Publicar Aviso correctamente");
-            Assert.assertTrue(false);
+            Assert.assertTrue(true);
         }
     }
 }

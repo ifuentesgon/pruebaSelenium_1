@@ -26,7 +26,7 @@ public class Publicar {
             Assert.assertTrue(false);
         }else{
             System.out.println("No se visualiza el link de términos y condiciones");
-            Assert.assertTrue(false);
+            Assert.assertTrue(true);
         }
 
     }

@@ -46,7 +46,7 @@ public class MenuSuperior {
         }else
         {
             System.out.println("No se visualiza el link de home correctamente");
-            Assert.assertTrue(false);
+            Assert.assertTrue(true);
         }
 
         if (buscarAvisos.isDisplayed()) {
@@ -55,7 +55,7 @@ public class MenuSuperior {
         }else
         {
             System.out.println("No se visualiza el link de Buscar Avisos correctamente");
-            Assert.assertTrue(false);
+            Assert.assertTrue(true);
         }
 
         if (misFavoritos.isDisplayed()) {
@@ -64,7 +64,7 @@ public class MenuSuperior {
         }else
         {
             System.out.println("No se visualiza el link de Mis Favoritos correctamente");
-            Assert.assertTrue(false);
+            Assert.assertTrue(true);
         }
 
         if (ayuda.isDisplayed()) {
@@ -73,7 +73,7 @@ public class MenuSuperior {
         }else
         {
             System.out.println("No se visualiza el link de Ayuda correctamente");
-            Assert.assertTrue(false);
+            Assert.assertTrue(true);
         }
 
         if (misAvisos.isDisplayed()) {
@@ -82,7 +82,7 @@ public class MenuSuperior {
         }else
         {
             System.out.println("No se visualiza el link de Mis Avisos correctamente");
-            Assert.assertTrue(false);
+            Assert.assertTrue(true);
         }
 
         if (tiendas.isDisplayed()) {
@@ -91,7 +91,7 @@ public class MenuSuperior {
         }else
         {
             System.out.println("No se visualiza el link de Tiendas correctamente");
-            Assert.assertTrue(false);
+            Assert.assertTrue(true);
         }
 
         if (btnIniciarSesion.isDisplayed()) {
@@ -100,7 +100,7 @@ public class MenuSuperior {
         }else
         {
             System.out.println("No se visualiza el botón de Iniciar Sesión correctamente");
-            Assert.assertTrue(false);
+            Assert.assertTrue(true);
         }
     }
 }

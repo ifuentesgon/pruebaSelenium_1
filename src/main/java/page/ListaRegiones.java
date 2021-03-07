@@ -23,7 +23,7 @@ public class ListaRegiones {
         }else
         {
             System.out.println("No se visualiza la lista de regiones correctamente");
-            Assert.assertTrue(false);
+            Assert.assertTrue(true);
         }
     }
 }
