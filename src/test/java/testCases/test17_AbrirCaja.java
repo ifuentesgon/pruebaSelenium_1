@@ -19,7 +19,7 @@ public class test17_AbrirCaja {
     String url = "http://inventario.tresniveles.com/?View=Login";
 
     @Test
-    public void flujoFront(){
+    public void flujoFront() throws InterruptedException {
 
         Login login=new Login();
         login.loginEasySystem();

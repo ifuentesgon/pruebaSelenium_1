@@ -2,6 +2,7 @@ package libreria;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -13,7 +14,7 @@ public class Conexion {
 
     String url;
     String path;
-
+    WebDriver driver;
     public Conexion() {
 
     }
@@ -36,6 +37,7 @@ public class Conexion {
 
     public void conectar(String url) {
         //* Identifica el Sistema Operativo *//
+        PageFactory.initElements(driver,this);
         String os = System.getProperty("os.name").toLowerCase(Locale.ROOT);
         //System.out.print(os);
         if (os.contains("mac")){

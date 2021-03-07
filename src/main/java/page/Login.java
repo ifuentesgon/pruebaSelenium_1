@@ -14,6 +14,8 @@ import sun.jvm.hotspot.debugger.Page;
 
 import java.util.concurrent.TimeUnit;
 
+import static utils.Utils.esperarElemento;
+
 
 public class Login {
     Conexion conexion = new Conexion();
@@ -23,6 +25,7 @@ public class Login {
 
     public Login(){
     }
+
 
     /*----------Objetos de Page Yapo.cl--------------- */
     @FindBy(xpath = "//*[@id=\'login-account-link\']")
@@ -50,9 +53,12 @@ public class Login {
 
 
     /*----------Objetos de Page Easy System--------------- */
-    By txtUsuario = By.id("username");
+    //By txtUsuario = By.id("username");
     By txtPassword = By.id("password");
     By botonIngresar = By.xpath("//body/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[4]/button[1]");
+
+    @FindBy(name= "username")
+    private WebElement txtUsuario;
 
 
      /*----------------------------------------------------*/
@@ -61,15 +67,23 @@ public class Login {
         String usuario= "admin";
         String password= "admin";
         conexion.conectar("http://inventario.tresniveles.com/?View=Login");
+        PageFactory.initElements(driver,this);
 
         //Ingreso usuario en caja de texto correspondiente
-        WebElement webElementUsuario = driver.findElement(txtUsuario);
-        webElementUsuario.sendKeys((CharSequence) usuario);
-        //Ingreso Password en caja de texto correspondiente
-        WebElement webElementPassword = driver.findElement(txtPassword);
-        webElementPassword.sendKeys((CharSequence) password);
-        //Doy click en Ingresar al sistema
-        wait.until(ExpectedConditions.elementToBeClickable(botonIngresar)).click();
+        //WebElement webElementUsuario = driver.findElement(txtUsuario);
+        //webElementUsuario.sendKeys((CharSequence) usuario);
+        if (esperarElemento(txtUsuario, 10)) {
+            txtUsuario.sendKeys(usuario);
+        }else{
+            System.out.println(txtUsuario + "Vacio");
+        }
+
+       //Ingreso Password en caja de texto correspondiente
+       WebElement webElementPassword = driver.findElement(txtPassword);
+       webElementPassword.sendKeys((CharSequence) password);
+
+     //Doy click en Ingresar al sistema
+//        wait.until(ExpectedConditions.elementToBeClickable(botonIngresar)).click();
 
         try {
             Thread.sleep(3000);
