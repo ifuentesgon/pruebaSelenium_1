@@ -3,7 +3,7 @@ package testCases;
 import org.testng.annotations.Test;
 import page.Empleado;
 
-public class test16_AgregarEmpleado {
+public class test16_AgregarEmpleadoEasySystem {
     String nombre = "John";
     String apellido = "Doe";
     String telefono = "12345678";
