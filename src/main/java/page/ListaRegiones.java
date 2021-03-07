@@ -15,7 +15,7 @@ public class ListaRegiones {
     private WebElement listaRegiones;
 
     public void existenRegiones() throws InterruptedException {
-        conexion.conectar();
+        conexion.conectar("www.yapo.cl");
         Thread.sleep(2000);
         if(listaRegiones.isDisplayed()){
             System.out.println("Se visualiza la lista de regiones correctamente");

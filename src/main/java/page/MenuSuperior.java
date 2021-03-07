@@ -36,7 +36,7 @@ public class MenuSuperior {
     private WebElement btnIniciarSesion;
 
     public void verificarMenSup() throws InterruptedException {
-        conexion.conectar();
+        conexion.conectar("www.yapo.cl");
         Thread.sleep(2000);
         btnpublicarAviso.click();
         Thread.sleep(2000);

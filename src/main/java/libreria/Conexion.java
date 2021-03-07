@@ -34,7 +34,7 @@ public class Conexion {
         this.path = path;
     }
 
-    public void conectar() {
+    public void conectar(String url) {
 
         //* Identifica el Sistema Operativo *//
         String os = System.getProperty("os.name").toLowerCase(Locale.ROOT);
@@ -56,8 +56,8 @@ public class Conexion {
         WebDriverWait wait = new WebDriverWait(driver,10);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
-        driver.get("https://www.yapo.cl/");
-
+        //driver.get("https://www.yapo.cl/");
+        driver.get(url);
 
 
     }

@@ -18,8 +18,8 @@ import org.openqa.selenium.support.ui.Select;
 public class Buscar {
     //Atributos
     Conexion conexion= new Conexion();
-    private WebDriver driver;
-    private WebDriverWait wait;
+    WebDriver driver;
+    WebDriverWait wait;
 
     public Buscar() {
     }
@@ -87,7 +87,7 @@ public class Buscar {
         if (tituloFiltroRegion.isDisplayed()){
             System.out.print("Se visualiza correctamente Titulo Filtro Por Region");
             Assert.assertTrue(false);
-            // addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
+            //addStep("Validar Vista 1 de carrucel",false, Status.PASSED,false);
 
         }else{
             System.out.print("No Se visualiza correctamente Titulo Filtro Por Region");
@@ -142,7 +142,7 @@ public class Buscar {
     }
 
     public void BuscarAutomovilToyota(){
-        conexion.conectar();
+        conexion.conectar("www.yapo.cl");
         validaMenuLateral();
         // valido que exista la region metropolitana y si existe le doy click
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(String.valueOf(regionMetropolitana))));
@@ -156,7 +156,7 @@ public class Buscar {
     }
 
     public void buscarEmpleo(){
-        conexion.conectar();
+        conexion.conectar("www.yapo.cl");
         validaMenuLateral();
         // valido que exista seleccion de categoria
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(String.valueOf(cboSeleccionCategoria))));
@@ -169,7 +169,7 @@ public class Buscar {
         botonBuscar.click();
     }
     public void buscarServicios(){
-        conexion.conectar();
+        conexion.conectar("www.yapo.cl");
         validaMenuLateral();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(String.valueOf(cboSeleccionCategoria))));
         if(driver.findElement(By.xpath(String.valueOf(cboSeleccionCategoria))).isDisplayed()){

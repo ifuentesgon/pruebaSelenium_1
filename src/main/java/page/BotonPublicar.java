@@ -15,7 +15,7 @@ public class BotonPublicar {
     private WebElement btnpublicarAviso;
 
     public void existeBotonPublicarAviso() throws InterruptedException {
-        conexion.conectar();
+        conexion.conectar("www.yapo.cl");
         Thread.sleep(2000);
         if(btnpublicarAviso.isDisplayed()){
             System.out.println("Se visualiza el botón Publicar Aviso correctamente");

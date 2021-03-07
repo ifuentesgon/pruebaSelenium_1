@@ -18,7 +18,7 @@ public class Publicar {
     private WebElement terminosYcondicones;
 
     public void verificarTerminosCondiciones() throws InterruptedException {
-        conexion.conectar();
+        conexion.conectar("www.yapo.cl");
         Thread.sleep(2000);
         btnPublicarAviso.click();
         if(terminosYcondicones.isDisplayed()){
