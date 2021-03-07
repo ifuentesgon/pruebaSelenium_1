@@ -9,9 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import java.util.concurrent.TimeUnit;
 
 public class Login {
-Conexion conexion = new Conexion();
+    Conexion conexion = new Conexion();
     public Login(){
-        conexion.conectar();
+
     }
 
     @FindBy(xpath = "//*[@id=\'login-account-link\']")
@@ -27,7 +27,7 @@ Conexion conexion = new Conexion();
     private WebElement btningresar;
 
     public void modalLogin(String username, String password) throws InterruptedException {
-
+        conexion.conectar();
         Thread.sleep(20000);
         btnInicioSesion.submit();
         WebDriver driver = new ChromeDriver();
