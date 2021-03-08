@@ -157,7 +157,7 @@ public class AgregoNuevoUsuario {
         //Boton Guardar
         if (esperarElemento(botonGuardar, 10)){
             botonGuardar.click();
-            System.out.println("Se Guarda lo ingresaro");
+            System.out.println("Se Guarda Correctamente lo ingresaro");
             Assert.assertTrue(true  );
         }
         else {

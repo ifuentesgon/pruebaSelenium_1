@@ -16,9 +16,8 @@ public class test17_AbrirCaja {
     String nombre = "admin";
     String pass = "admin";
 
+    @Test
     public void flujoFront() {
-
-
         loginPage.validaModalLogin();
         loginPage.ingresaUser(nombre);
         loginPage.ingresaPass(pass);
