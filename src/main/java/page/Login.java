@@ -20,12 +20,11 @@ public class Login {
         conexion = new Conexion();
     }
 
-    WebDriver driver = new ChromeDriver();
-    WebDriverWait wait;
+    private WebDriver driver; //= new ChromeDriver();
+    private WebDriverWait wait;
 
     public Login() {
     }
-
 
     /*----------Objetos de Page Yapo.cl--------------- */
     @FindBy(xpath = "//*[@id=\'login-account-link\']")
@@ -57,7 +56,6 @@ public class Login {
     By botonIngresar = By.xpath("//body/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[4]/button[1]");
     @FindBy(name= "username")
     private WebElement txtUsuario;
-
 
      /*----------------------------------------------------*/
 

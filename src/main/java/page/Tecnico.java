@@ -8,9 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 public class Tecnico {
-    WebDriver driver;
+    private WebDriver driver;
     Conexion conexion = new Conexion();
-    Login login = new Login();
+    //Login login = new Login();
     public Tecnico(){ }
 
     By opcionTaller = By.xpath("//body/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[11]/a[1]");

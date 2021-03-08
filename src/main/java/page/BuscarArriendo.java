@@ -13,7 +13,7 @@ import org.testng.annotations.*;
 
 public class BuscarArriendo {
     private WebDriver driver;
-    private WebDriverWait wait;
+
     Conexion conexion = new Conexion();
     public BuscarArriendo(){ }
 

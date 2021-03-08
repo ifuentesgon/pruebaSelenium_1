@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class MenuSuperior {
-    WebDriver driver;
+    private WebDriver driver;
     Conexion conexion = new Conexion();
     public MenuSuperior() {}
 

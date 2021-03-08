@@ -10,7 +10,6 @@ public class test18_AgregarUsuarioEasySystem {
     public test18_AgregarUsuarioEasySystem() {
     }
 
-    @Test
     public void agregarNuevoUsuario() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         Login login=new Login();

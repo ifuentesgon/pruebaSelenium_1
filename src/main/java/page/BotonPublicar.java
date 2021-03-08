@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class BotonPublicar {
-    WebDriver driver;
     Conexion conexion = new Conexion();
     public BotonPublicar() {}
 
@@ -17,6 +16,7 @@ public class BotonPublicar {
     public void existeBotonPublicarAviso() throws InterruptedException {
         conexion.conectar("www.yapo.cl");
         Thread.sleep(2000);
+
         if(btnpublicarAviso.isDisplayed()){
             System.out.println("Se visualiza el botón Publicar Aviso correctamente");
             Assert.assertTrue(false);

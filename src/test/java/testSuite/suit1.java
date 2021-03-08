@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
+import testCases.test18_AgregarUsuarioEasySystem;
 
 import java.nio.file.Paths;
 
@@ -29,20 +30,11 @@ public class suit1 {
 
     @Test
     public void login() throws InterruptedException {
-
-
         //     Thread.sleep(20000);
         driver.findElement(usernameLogin).sendKeys("admin");
         driver.findElement(paswordLogin).sendKeys("admin");
         driver.findElement(btnIngresar).click();
-
-
-
-        //test17_AbrirCaja cpa = new test17_AbrirCaja ();
+     //test17_AbrirCaja cpa = new test17_AbrirCaja ();
         //cpa.flujoFront();
-
-
-
-
     }
 }

@@ -9,8 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class Empleado {
-    WebDriver driver = new ChromeDriver();
-    WebDriverWait wait;
+    private WebDriver driver;// = new ChromeDriver();
+    private WebDriverWait wait;
     Conexion conexion = new Conexion();
     Login login = new Login();
     public Empleado(){ }
@@ -114,10 +114,11 @@ public class Empleado {
         if(webElementlabelEmail.isDisplayed()){
             System.out.println("Se visualiza el título Email correctamente");
             Assert.assertTrue(false);
-        }else{
+        } else{
             System.out.println("No se visualiza el título Email correctamente");
             Assert.assertTrue(true);
         }
+
         WebElement webElementxtEmail = driver.findElement(txtEmail);
         webElementxtEmail.sendKeys(email);
         WebElement webElementbtnGuardar = driver.findElement(btnGuardar);

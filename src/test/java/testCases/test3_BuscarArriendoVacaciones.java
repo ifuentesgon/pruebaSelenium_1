@@ -10,9 +10,8 @@ public class test3_BuscarArriendoVacaciones {
 
     String busqueda = "arriendo vacaciones";
 
-    @Test
     public void test3() throws InterruptedException {
-        BuscarArriendo buscarArriendo = new BuscarArriendo();
-        buscarArriendo.busquedaArriendoVacaciones(busqueda);
+//        BuscarArriendo buscarArriendo = new BuscarArriendo();
+//        buscarArriendo.busquedaArriendoVacaciones(busqueda);
     }
 }

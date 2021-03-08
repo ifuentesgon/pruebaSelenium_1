@@ -143,7 +143,6 @@ public class AgregoNuevoUsuario {
             WebElement selectElement = driver.findElement(By.id(String.valueOf(cboTipoUsuario)));
             Select selectObject = new Select(selectElement);
             selectObject.selectByVisibleText("CAJERO/A");
-
             System.out.println("Se realiza Seleccion de Empleado ingresado");
             Assert.assertTrue(false  );
         }
@@ -151,7 +150,6 @@ public class AgregoNuevoUsuario {
             System.out.println("No es  Posible realizar Click en Opcion Usuarios");
             Assert.assertTrue(true );
         }
-
 
         //Boton Guardar
         if (esperarElemento(botonGuardar, 10)){
