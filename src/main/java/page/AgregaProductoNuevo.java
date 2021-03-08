@@ -1,9 +1,20 @@
 package page;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.TestRunner;
+
+import static utils.Utils.esperarElemento;
 
 public class AgregaProductoNuevo {
+    private WebDriverWait wait;
+    private WebDriver driver;
     public AgregaProductoNuevo() {
     }
 
@@ -68,5 +79,151 @@ public class AgregaProductoNuevo {
     private WebElement switchInventariable;
     @FindBy(id = "btnGuardar")
     private WebElement btnGuardar;
+
+    private void agregarProductos() throws InterruptedException {
+        Login login = new Login();
+        login.loginEasySystem();
+
+        //Click en Menu Lateral Almacen
+        if (esperarElemento(menuLateralAlmacen, 10)){
+            wait.until(ExpectedConditions.elementToBeClickable(menuLateralAlmacen)).click();
+            menuLateralAlmacen.click();
+            System.out.println("Se realiza Click en Menu Lateral Izquierdo ALMACEN");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No es  Posible realizar Click en despligue Usuarios");
+            Assert.assertFalse(true );
+        }
+        //Click en Menu Perteneciente Almacen Opcion Productos
+        if (esperarElemento(producto, 10)){
+            wait.until(ExpectedConditions.elementToBeClickable(producto)).click();
+            producto.click();
+            System.out.println("Se realiza Click en Menu Lateral Izquierdo ALMACEN");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No es  Posible realizar Click en despligue Usuarios");
+            Assert.assertFalse(true );
+        }
+        //visualizo Titulo Productos
+        if (tituloProducto.isDisplayed()){
+            System.out.print("Se visualiza correctamente Titulo Productos del PopUP");
+            Assert.assertTrue(false);
+        }
+        else{
+            System.out.print("No Se visualiza correctamente combobox, seleccione una Comuna");
+            Assert.assertFalse(true);
+        }
+        //Click en Menu Perteneciente Almacen Opcion Productos
+        if (esperarElemento(botonAgregaProducto, 10)){
+            wait.until(ExpectedConditions.elementToBeClickable(botonAgregaProducto)).click();
+            botonAgregaProducto.click();
+            System.out.println("Se realiza Click en Boton Agregar Producto");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No Se Pudo realiza Click en Boton Agregar Producto\"");
+            Assert.assertFalse(true );
+        }
+        //Ingresa un Nuevo producto
+        if (esperarElemento(textIngresoProducto, 10)){
+            textIngresoProducto.sendKeys("Bebida Cola");
+            System.out.println("Se ingresa nuevo producto");
+            Assert.assertTrue(true  );
+        }
+        else {
+            System.out.println("No es  Posible ingresar producto");
+            Assert.assertFalse(true);
+        }
+        //Ingresa cantidad de Stock
+        if (esperarElemento(txtCantStock, 10)){
+            textIngresoProducto.sendKeys("100");
+            System.out.println("Se ingresa Cantidad de Stock");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No es  Posible ingresar Cantidad de Stock");
+            Assert.assertFalse(true);
+        }
+        //Ingresa Precio Compra
+        if (esperarElemento(txtPrecioCompra, 10)){
+            textIngresoProducto.sendKeys("100");
+            System.out.println("Se ingresa Precio de Compra");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No es  Posible ingresar Precio de Compra");
+            Assert.assertFalse(true);
+        }
+        //Ingresa Precio Compra uno
+        if (esperarElemento(txtPrecio1, 10)){
+            textIngresoProducto.sendKeys("500");
+            System.out.println("Se ingresa Precio de Compra 1");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No es  Posible ingresar Precio de Compra 1");
+            Assert.assertFalse(true);
+        }
+        //Ingresa Precio Compra dos
+        if (esperarElemento(txtprecio2, 10)){
+            textIngresoProducto.sendKeys("3500");
+            System.out.println("Se ingresa Precio de Compra 2");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No es  Posible ingresar Precio de Compra 2");
+            Assert.assertFalse(true);
+        }
+        //Ingresa Precio Compra tres
+        if (esperarElemento(txtprecio3, 10)){
+            textIngresoProducto.sendKeys("200");
+            System.out.println("Se ingresa Precio de Compra 3");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No es  Posible ingresar Precio de Compra 3");
+            Assert.assertFalse(true);
+        }
+        //Ingresa Precio Compra tres
+        if (esperarElemento(txtStockMin, 10)){
+            textIngresoProducto.sendKeys("2");
+            System.out.println("Se ingresa Stock Minimo");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No es  Posible ingresar Stock Minimo");
+            Assert.assertFalse(true);
+        }
+        //Selecciono Empleado agregado
+        if (esperarElemento(cboSelectCategoria, 10)){
+            wait.until(ExpectedConditions.elementToBeClickable(cboSelectCategoria)).click();
+            WebElement selectElement = driver.findElement(By.id(String.valueOf(cboSelectCategoria)));
+            Select selectObject = new Select(selectElement);
+            selectObject.selectByVisibleText("BEBIDAS");
+            System.out.println("Se realiza Seleccion de Categoria");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No es  Posible realizar Seleccion de Categoria");
+            Assert.assertTrue(true );
+        }
+
+
+        //Click en Final Imprimir
+        if (esperarElemento(botonImprimir, 10)){
+            wait.until(ExpectedConditions.elementToBeClickable(botonImprimir)).click();
+            botonImprimir.click();
+            System.out.println("Se realiza Click en Boton Agregar Producto");
+            Assert.assertTrue(false  );
+        }
+        else {
+            System.out.println("No Se Pudo realiza Click en Boton Agregar Producto\"");
+            Assert.assertFalse(true );
+        }
+
+
+    }
 
 }

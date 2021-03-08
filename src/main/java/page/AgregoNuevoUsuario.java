@@ -107,7 +107,6 @@ public class AgregoNuevoUsuario {
             WebElement selectElement = driver.findElement(By.id(String.valueOf(cboIngresaEmpleado)));
             Select selectObject = new Select(selectElement);
             selectObject.selectByVisibleText("JOSE MIGUEL RONGO");
-
             System.out.println("Se realiza Seleccion de Empleado ingresado");
             Assert.assertTrue(false  );
         }
