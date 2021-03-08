@@ -159,6 +159,7 @@ public class Buscar {
         }
         botonBuscar.click();
     }
+
     public void buscarServicios(){
         conexion.conectar("www.yapo.cl");
         validaMenuLateral();

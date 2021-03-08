@@ -5,6 +5,8 @@ import page.BuscarArriendo;
 import page.Login;
 
 public class test3_BuscarArriendoVacaciones {
+    public test3_BuscarArriendoVacaciones() {
+    }
 
     String busqueda = "arriendo vacaciones";
 

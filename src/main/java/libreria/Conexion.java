@@ -15,7 +15,7 @@ public class Conexion {
     String url;
     String path;
     WebDriver driver;
-    public Conexion() {
+    public void Conexion() {
 
     }
 

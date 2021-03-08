@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import page.Login;
 
 public class test1_BuscarNotebook_Metropolitana {
+    public test1_BuscarNotebook_Metropolitana() {
+    }
 
     String correo = "nafugo@gmail.com";
     String pass = "nacho1716";

@@ -4,6 +4,9 @@ import org.testng.annotations.Test;
 import page.Empleado;
 
 public class test16_AgregarEmpleadoEasySystem {
+    public test16_AgregarEmpleadoEasySystem() {
+    }
+
     String nombre = "John";
     String apellido = "Doe";
     String telefono = "12345678";

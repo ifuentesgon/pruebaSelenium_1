@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.TestRunner;
 
 import static utils.Utils.esperarElemento;
 
@@ -80,7 +79,7 @@ public class AgregaProductoNuevo {
     @FindBy(id = "btnGuardar")
     private WebElement btnGuardar;
 
-    private void agregarProductos() throws InterruptedException {
+    public void agregarProductos() throws InterruptedException {
         Login login = new Login();
         login.loginEasySystem();
 

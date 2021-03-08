@@ -9,19 +9,21 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
-
 import java.util.concurrent.TimeUnit;
-
 import static utils.Utils.esperarElemento;
 
 
 public class Login {
-    Conexion conexion = new Conexion();
-    WebDriver driver; //= new ChromeDriver();
+    public Conexion conexion;
+
+    {
+        conexion = new Conexion();
+    }
+
+    WebDriver driver = new ChromeDriver();
     WebDriverWait wait;
-    public Login(){
+
+    public Login() {
     }
 
 
@@ -45,7 +47,6 @@ public class Login {
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         ingresoCorreo.sendKeys(username);
         ingresoPass.sendKeys(password);
-
         btningresar.click();
     }
 
@@ -54,7 +55,6 @@ public class Login {
     //By txtUsuario = By.id("username");
     By txtPassword = By.id("password");
     By botonIngresar = By.xpath("//body/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[4]/button[1]");
-
     @FindBy(name= "username")
     private WebElement txtUsuario;
 
@@ -62,6 +62,7 @@ public class Login {
      /*----------------------------------------------------*/
 
     public void loginEasySystem()throws InterruptedException{
+
         String usuario= "admin";
         String password= "admin";
         conexion.conectar("http://inventario.tresniveles.com/?View=Login");
