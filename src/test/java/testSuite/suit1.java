@@ -1,75 +1,48 @@
 package testSuite;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
-import testCases.test17_AbrirCaja;
 
 import java.nio.file.Paths;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 
 public class suit1 {
 
     private WebDriver driver;
     private WebDriverWait wait;
 
-/*
-    @BeforeClass
-    public void preparacion_tests(){
-        //String path = Paths.get(System.getProperty("user.dir"),"\\src\\main\\resources\\drivers\\chromedriver").toString();
-        //System.setProperty("webdriver.chrome.driver", path);
-
-
-
-    }
+    By usernameLogin = By.id("username");
+    By paswordLogin = By.id("password");
+    By btnIngresar = By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[4]/button");
 
     @BeforeMethod
-    public void inicio_tests(){
+    public void setUP(){
 
-    }
-
-    @AfterMethod
-    public void limpiar_tests(){
-        driver.close();
-    }
-
-    @AfterTest
-    public void post_ejecucion_tests(){
-        System.out.println("Se finaliza la ejecución.");
-    }
-*/
-
-    //(priority = 1, description = "Caso 1: Abrir Caja")
-    @Test
-    public void test17_AbrirCaja() {
-        String os = System.getProperty("os.name").toLowerCase(Locale.ROOT);
-        if (os.contains("mac")){
-            String path = Paths.get(System.getProperty("user.dir"),"/src/main/resources/drivers/chromedriver").toString();
-            System.setProperty("webdriver.chrome.driver", path);
-        }else {
-            String path = Paths.get(System.getProperty("user.dir"), "\\src\\main\\resources\\drivers\\chromedriver.exe").toString();
-            System.setProperty("webdriver.chrome.driver", path);
-        }
-
+        String path = Paths.get(System.getProperty("user.dir"),"/src/main/resources/drivers/chromedriver").toString();
+        System.setProperty("webdriver.chrome.driver", path);
         driver = new ChromeDriver();
-
-        wait = new WebDriverWait(driver,10);
-
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-
-        driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
-
-
-        driver.get("http://inventario.tresniveles.com/?View=Login");
-
         driver.manage().window().maximize();
+        driver.get("http://inventario.tresniveles.com/?View=Login");
+    }
+
+    @Test
+    public void login() throws InterruptedException {
+
+
+        //     Thread.sleep(20000);
+        driver.findElement(usernameLogin).sendKeys("admin");
+        driver.findElement(paswordLogin).sendKeys("admin");
+        driver.findElement(btnIngresar).click();
 
 
 
-        test17_AbrirCaja cpa = new test17_AbrirCaja ();
-        cpa.flujoFront();
+        //test17_AbrirCaja cpa = new test17_AbrirCaja ();
+        //cpa.flujoFront();
+
+
+
 
     }
 }
