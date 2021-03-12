@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utils {
 
+
     public static boolean esperarElemento(WebElement elemento, int segudos){
         try {
             System.out.println("[Utils - esperarElemento] Se busca elemento: "+elemento);

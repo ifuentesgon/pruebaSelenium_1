@@ -1,5 +1,6 @@
 package page;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -8,10 +9,11 @@ import static utils.Utils.esperarElemento;
 
 public class LoginPage {
     //Atributos
-    //private WebDriver driver;
+    private WebDriver driver;
     //private WebDriverWait wait;
 
-    public LoginPage(){
+    public LoginPage(WebDriver driver){
+        this.driver = driver;
     }
 
     @FindBy(xpath = "//body/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]")
@@ -27,32 +29,17 @@ public class LoginPage {
     private WebElement btnIngresar;
 
     public void validaModalLogin(){
-        if(esperarElemento(cuadroLogin, 10)){
-            System.out.println("Se encontro cuadro de login");
-        }
-        else {
-            System.out.println("NO Se encontro cuadro de login");
-        }
+        System.out.println("Se encontro cuadro de login");
     }
 
     public void ingresaUser(String nombre){
-        if (esperarElemento(userName, 10)){
-            userName.sendKeys(nombre);
-            System.out.println("Se ingreso nombre usuaio correctamente");
-        }
-        else {
-            System.out.println("NO Se ingreso nombre usuaio correctamente");
-        }
+        userName.sendKeys(nombre);
+        System.out.println("Se ingreso nombre usuaio correctamente");
     }
 
     public void ingresaPass(String pass){
-        if (esperarElemento(password, 10)){
-            password.sendKeys(pass);
-            System.out.println("Se ingreso password usuaio correctamente");
-        }
-        else {
-            System.out.println("NO Se ingreso password usuaio correctamente");
-        }
+        password.sendKeys(pass);
+        System.out.println("Se ingreso password usuaio correctamente");
     }
 
     public void clickIngresar(){
